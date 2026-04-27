@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-mango-yellow: #FFC300;
+  --color-mango-green: #28a745; /* More vibrant green like the image */
+  --color-mango-orange: #f39c12;
+  --color-mango-dark: #1A1A1A;
+  --color-mango-bg: #f8f9fa;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-mango-bg text-mango-dark;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+.section-title {
+  @apply flex items-center justify-center gap-4 mb-12;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  @apply h-px bg-stone-300 flex-1 max-w-[100px];
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
